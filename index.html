@@ -9,12 +9,41 @@
 <body>
     <div class="container">
         <h1>Choose Stack Size</h1>
+        <section class="cards-section">
+            <h2>13 pókerkártya</h2>
+            <p class="subtitle">Nézd meg a lapokat, mielőtt kiválasztod a stacket.</p>
+            <div class="card-gallery" id="card-gallery"></div>
+        </section>
         <div class="action-section">
             <button class="secondary-btn" onclick="location.href='analyzer.html?stack=14'">14bb</button>
             <button class="secondary-btn" onclick="location.href='analyzer.html?stack=20'">20bb</button>
             <button class="secondary-btn" onclick="location.href='analyzer.html?stack=25'">25bb</button>
         </div>
     </div>
+
+    <script>
+        const ranks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+        const suit = { symbol: "♥", color: "#d9184b" };
+
+        const gallery = document.getElementById("card-gallery");
+
+        ranks.forEach((rank) => {
+            const svg = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="140" height="190" viewBox="0 0 140 190">
+                    <rect x="5" y="5" width="130" height="180" rx="10" ry="10" fill="#ffffff" stroke="#c7c7c7" stroke-width="4" />
+                    <text x="16" y="32" font-family="'Segoe UI', 'Roboto', sans-serif" font-size="28" font-weight="bold" fill="${suit.color}">${rank}</text>
+                    <text x="124" y="178" font-family="'Segoe UI', 'Roboto', sans-serif" font-size="28" font-weight="bold" fill="${suit.color}" transform="rotate(180 124 178)">${rank}</text>
+                    <text x="70" y="105" font-family="'Segoe UI', 'Roboto', sans-serif" font-size="52" font-weight="bold" text-anchor="middle" fill="${suit.color}">${suit.symbol}</text>
+                </svg>
+            `;
+
+            const img = document.createElement("img");
+            img.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+            img.alt = `${rank} of Hearts`;
+            img.className = "card-image";
+            gallery.appendChild(img);
+        });
+    </script>
 </body>
 </html>
 
