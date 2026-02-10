@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI model release piacok | Polymarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container ai-markets-container">
+        <div class="action-section">
+            <button class="secondary-btn" onclick="location.href='index.html'">Vissza a főoldalra</button>
+        </div>
+
+        <h1>AI modellek megjelenési valószínűségei</h1>
+        <p class="subtitle">Polymarket AI piacok vizuális összefoglalója modellenként, becsült megjelenési határidőkkel.</p>
+
+        <div class="warning-box">
+            <strong>Megjegyzés:</strong> a futtatási környezetből a Polymarket API közvetlenül nem volt elérhető.
+            Az alábbi adatok kézzel rögzített snapshot adatok, amelyeket a <em>Frissítés most</em> gombbal könnyen felülírhatsz később.
+        </div>
+
+        <div class="action-section">
+            <button id="refresh-snapshot-btn" class="secondary-btn">Frissítés most (helyi snapshot időbélyeg)</button>
+        </div>
+
+        <div id="snapshot-meta" class="snapshot-meta"></div>
+        <div id="model-card-grid" class="model-card-grid"></div>
+
+        <h2>Határidő timeline</h2>
+        <div id="deadline-timeline" class="deadline-timeline"></div>
+    </div>
+
+    <script src="ai_markets.js"></script>
+</body>
+</html>
