@@ -146,3 +146,103 @@ button {
 #next-question-btn { background-color: #43b581; margin-top: 10px; }
 #exit-practice-btn { margin-top: 15px; background-color: #f04747; }
 .hidden { display: none !important; }
+
+.ai-markets-container {
+    max-width: 980px;
+}
+
+.warning-box {
+    background: #4f545c;
+    border-left: 4px solid #f0c674;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0 20px;
+    color: #f4f4f4;
+}
+
+.snapshot-meta {
+    text-align: center;
+    color: #99aab5;
+    margin-bottom: 18px;
+}
+
+.model-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.model-card {
+    background: #40444b;
+    border: 1px solid #4f545c;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+.model-card h3 {
+    margin: 0 0 8px;
+    color: #9db1ff;
+}
+
+.market-question {
+    color: #d6d9de;
+    min-height: 42px;
+}
+
+.model-probability {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #43b581;
+}
+
+.probability-bar {
+    width: 100%;
+    background: #2c2f33;
+    border-radius: 999px;
+    overflow: hidden;
+    height: 12px;
+    margin-top: 8px;
+}
+
+.probability-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #43b581, #7289da);
+}
+
+.deadline-timeline {
+    border-top: 1px solid #4f545c;
+    margin-top: 10px;
+}
+
+.timeline-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #35393f;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: #f0c674;
+}
+
+.timeline-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .timeline-row {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-content {
+        flex-direction: column;
+    }
+}
